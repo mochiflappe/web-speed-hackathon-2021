@@ -6,7 +6,7 @@
   "scripts": {
     "analyze": "cross-env NODE_ENV=development webpack --analyze",
     "prebuild": "rimraf ../dist",
-    "build": "cross-env NODE_ENV=development webpack",
+    "build": "cross-env NODE_ENV=production webpack --mode=production",
     "develop": "cross-env NODE_ENV=development webpack serve"
   },
   "dependencies": {
@@ -69,5 +69,8 @@
     "ignorePackages": [
       "core-js"
     ]
-  }
+  },
+  "browserslist": [
+    "last 1 chrome version"
+  ]
 }
